@@ -30,6 +30,12 @@ h1 {
   margin-top: 20px;
 }
 
+#score {
+  color: #fff;
+  font-size: 30px;
+  margin-top: 20px;
+}
+
 .grid-container {
   width: 600px;
   height: 600px;
@@ -57,4 +63,8 @@ h1 {
 
 .square.clicked {
   background-color: rgb(127, 255, 212);
+}
+
+.square.clicked-bomb {
+  background-color: rgb(255, 89, 59);
 }
