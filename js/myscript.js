@@ -17,7 +17,7 @@ for (let i = 1; i <= 100; i++) {
 
   // aggiungo un evento al click ad ogni nuovo box
   newSquare.addEventListener("click", function () {
-    // funzione per rendere cliccabile ogni cella una sola volta
+    // condizione per rendere cliccabile ogni cella una sola volta
     if (
       newSquare.classList.contains("clicked") ||
       newSquare.classList.contains("clicked-bomb")
@@ -25,19 +25,19 @@ for (let i = 1; i <= 100; i++) {
       return;
     }
 
-    if (bombarr.includes(i)) {
-      newSquare.classList.add("clicked-bomb");
-      alert("HAI PERSOOOO!!!");
-    } else {
+    if (!bombarr.includes(i)) {
       // aggiungo la classe per dare il colore ad ogni cella che viene cliccata
       newSquare.classList.add("clicked");
       score += 1;
       scoreCard.innerHTML = `Punteggio: ${score}`;
       console.log(score);
+    } else {
+      newSquare.classList.add("clicked-bomb");
+      alert(`Hai perso!!! Il tuo punteggio è ${score}`);
     }
 
     if (score === safeCells) {
-      alert("HAI VINTOOOOO!!!");
+      alert(`HAI VINTOOOO!!! IL TUO PUNTEGGIO E': ${score}`);
     }
 
     // stampo in console il numero della cella che viene cliccata
