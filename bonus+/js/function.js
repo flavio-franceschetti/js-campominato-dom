@@ -13,6 +13,9 @@ function randomNum(min, max) {
 
 // creo una funzione per selezionare la difficoltà
 function difficultyFunctionSelect(tabCells, classToAdd, secondClass) {
+  // ogni volta che viene invocata la funzione la griglia si svuota per evitare di sommarla con la nuova che viene genrata
+  gridContainer.innerHTML = "";
+
   for (let i = 1; i <= tabCells; i++) {
     //creo un nuovo square
     const newSquare = createElement("div", classToAdd, secondClass);
