@@ -46,10 +46,39 @@ h1 {
 }
 
 .square {
+  border: 2px solid #fff;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  align-content: center;
+}
+
+.square100 {
   width: calc(100% / 10);
   height: calc(100% / 10);
   cursor: crosshair;
+  border: 2px solid #fff;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  align-content: center;
+}
 
+.square81 {
+  width: calc(100% / 9);
+  height: calc(100% / 9);
+  cursor: crosshair;
+  border: 2px solid #fff;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  align-content: center;
+}
+
+.square49 {
+  width: calc(100% / 7);
+  height: calc(100% / 7);
+  cursor: crosshair;
   border: 2px solid #fff;
   color: #fff;
   font-weight: 700;
