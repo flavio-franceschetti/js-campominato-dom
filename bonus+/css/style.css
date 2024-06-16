@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(4, 22, 39);
+}
+
+.container {
+  text-align: center;
+}
+
+h1 {
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 30px;
+}
+
+.play-btn {
+  border: none;
+  background: lightcoral;
+  color: #fff;
+  font-size: 30px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+#score {
+  color: #fff;
+  font-size: 30px;
+  margin-top: 20px;
+}
+
+.grid-container {
+  width: 600px;
+  height: 600px;
+  margin: 50px auto;
+  display: none;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+.square {
+  width: calc(100% / 10);
+  height: calc(100% / 10);
+  cursor: crosshair;
+
+  border: 2px solid #fff;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  align-content: center;
+}
+
+.show-grid {
+  display: flex;
+}
+
+.square.clicked {
+  background-color: rgb(127, 255, 212);
+}
+
+.square.clicked-bomb {
+  background-color: rgb(255, 89, 59);
+}
