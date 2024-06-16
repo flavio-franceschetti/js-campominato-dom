@@ -28,6 +28,7 @@ difficultySelector.addEventListener("change", function () {
   }
   // richiamo la funzione per stampare la griglia in base alla difficoltà selezionata
   difficultyFunctionSelect(tabCells, classToAdd, "square");
+  bombGenerator(tabCells);
 });
 
 // aggiungiamo un ciclo fino a 100 per inserire gli elementi
@@ -86,15 +87,18 @@ playBtn.addEventListener("click", function () {
 
 // creo array delle bombe
 const bombarr = [];
-console.log(bombarr);
-// ciclo dove finchè l'array non è lungo 16 continua a generare numeri
-while (bombarr.length < 16) {
-  // funzione per generare 16 numeri casuali nel range
-  let bombNum = randomNum(1, 100);
-  // console.log(bombNum);
-  // condizione per non ripetere gli stessi numeri nell'array.
-  // se nell'array non è ancora incluso il numero generato allora pushalo
-  if (!bombarr.includes(bombNum)) {
-    bombarr.push(bombNum);
+// creo una funzione per implementare le bombe generate in base alla dimensione della griglia scelta dalla difficoltà
+function bombGenerator(bombRangeGenerate) {
+  // ciclo dove finchè l'array non è lungo 16 continua a generare numeri
+  while (bombarr.length < 16) {
+    // funzione per generare 16 numeri casuali nel range
+    let bombNum = randomNum(1, bombRangeGenerate);
+    // console.log(bombNum);
+    // condizione per non ripetere gli stessi numeri nell'array.
+    // se nell'array non è ancora incluso il numero generato allora pushalo
+    if (!bombarr.includes(bombNum)) {
+      bombarr.push(bombNum);
+    }
   }
+  console.log(bombarr);
 }
